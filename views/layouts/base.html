@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block metatitle %}Guide to making Mut Coins | Madden 2017{% endblock %}</title>
+    <meta name="description" content="{% block metadescription %}This is an example of a meta description. This will often show up in search results.{% endblock %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#992222">
+    <link rel="canonical" href="http://mutcoins.com{% block canonical %}{% endblock %}" />
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700%7COpen+Sans%3A300%2C400%2C600%2C700"/>
+    {% include "../partials/favicons.html" %}    <link rel="manifest" href="manifest.json">
+  </head>
+  <body class="header-image content-sidebar" itemscope itemtype="http://schema.org/WebPage">
+    <div class="site-container">
+      {% include "../partials/header.html" %}
+      <div class="site-inner">
+        <div class="content-sidebar-wrap">
+          <main class="content">
+            {% block content %}{% endblock %}
+          </main>
+          <aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+            {% include "../partials/dynamic/post-recent.html" %}
+          </aside>
+        </div>
+      </div>
+      {% include "../partials/footer.html" %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% block metatitle %}{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %}{% endblock %}
+
+{% block metadescription %}{% if metaDescription %}{{ metaDescription }}{% endif %}{% endblock %}
+
+{% block canonical %}/{{ slug }}/{% endblock %}
+
+{% block content %}
+<header class="entry-header">
+	<h1 class="entry-title" itemprop="headline">{{ title }}</h1>
+	<p class="entry-meta">by 
+		<strong>
+			<span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+				<span class="entry-author-name" itemprop="name">{{ author[0].fields.name }}</span>
+			</span>
+		</strong> | Last Updated <time class="entry-time" itemprop="datePublished" datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date("MMMM D, YYYY") }}</time>
+	</p>
+</header>
+
+{% markdown %}
+{{ body }}
+{% endmarkdown %}
+
+<section class="author-box" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+	<img alt="" src="{{ author[0].fields.profilePhoto.fields.file.url }}?w=100" srcset="{{ author[0].fields.file }}?w=140 2x" class="avatar avatar-70 photo" height="70" width="70">
+	<h4 class="author-box-title">About <span itemprop="name">{{ author[0].fields.name }}</span></h4>
+	<div class="author-box-content" itemprop="description"><p>{{ author[0].fields.biography }} <a href="/about/">Read more about him.</a></p></div></section>
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{%- macro article(post) -%}
+    <article class="post type-post status-publish format-standard has-post-thumbnail category-computers-technology tag-drones entry" itemscope itemtype="http://schema.org/CreativeWork">
+      <header class="entry-header">
+        <h2 class="entry-title" itemprop="headline">
+          <a href="{{ post.slug }}" rel="bookmark">{{ post.title }}</a>
+        </h2>
+        <p class="entry-meta">by 
+          <strong>
+            <span class="entry-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="entry-author-name" itemprop="name">{{ post.author[0].fields.name }}</span>
+            </span>
+          </strong> | Last Updated 
+          <time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date('YYYY-MM-DD') }}">{{ post.date | date("MMMM D, YYYY") }}</time>
+        </p>
+      </header>
+      <div class="entry-content" itemprop="text">
+        {% if post.featuredImage %}
+          <a class="entry-image-link" href="{{ post.slug }}" aria-hidden="true">
+            <img width="800" height="300" src="{{ post.featuredImage.fields.file.url }}?w=800" class=" post-image entry-image" alt="Best Drone Cameras 2017 &#8211; Buyer&#8217;s Guide" itemprop="image" srcset="{{ post.featuredImage.fields.file.url }}?w=800 800w, {{ post.featuredImage.fields.file.url }}?w=300 300w, {{ post.featuredImage.fields.file.url }}?w=768 768w" sizes="(max-width: 800px) 100vw, 800px"/>
+          </a>
+        {% endif %}
+        <p>{{ post.description }} 
+          <a href="{{ post.slug }}" class="more-link">[Read more...] 
+            <span class="screen-reader-text">{{ post.title }}</span>
+          </a>
+        </p>
+      </div>
+    </article>
+{%- endmacro -%}

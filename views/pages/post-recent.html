@@ -1,0 +1,10 @@
+<section class="widget widget_recent_entries">
+  <div class="widget-wrap">
+    <h4 class="widget-title widgettitle">Recently Blog Entries</h4>
+    <ul>
+      {% for post in posts -%}
+        <li><a href="/{{ post.slug }}/">{{ post.title }}</a></li>
+      {% endfor -%}
+    </ul>
+  </div>
+</section> 

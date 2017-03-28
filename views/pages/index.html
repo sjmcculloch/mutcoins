@@ -1,0 +1,4 @@
+{% import "partials/components.html" as comp %}
+{% for post in api.posts -%}
+  {{ comp.article(post) }}
+{% endfor -%}

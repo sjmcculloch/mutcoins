@@ -174,8 +174,8 @@ gulp.task('build:local', function(callback) {
 gulp.task('build:serve', function(callback) {
   runSequence(
     'build:local',
-    'serve',
     'watch',
+    'serve',
     callback
   );
 });

@@ -13,7 +13,6 @@ const runSequence = require('run-sequence');
 const contentful = require('contentful');
 const stringify = require('json-stringify-safe');
 var dateFilter = require('nunjucks-date-filter');
-
 const markdown = require('nunjucks-markdown');
 const marked = require('marked');
 var replace = require('gulp-replace');

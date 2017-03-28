@@ -12,7 +12,6 @@ const prettyUrl = require("gulp-pretty-url");
 const runSequence = require('run-sequence');
 const contentful = require('contentful');
 const stringify = require('json-stringify-safe');
-const NunjucksInspect = require('nunjucks-inspect');
 var dateFilter = require('nunjucks-date-filter');
 
 const markdown = require('nunjucks-markdown');
@@ -24,7 +23,6 @@ const nunj = require('nunjucks');
 nunj.configure('views', {watch: false});
 
 var env = new nunj.Environment(new nunj.FileSystemLoader('views', { noCache: true, watch: false }), { autoescape: false }); 
-env.addExtension('inspect', new NunjucksInspect());
 env.addFilter('date', dateFilter);
 markdown.register(env, marked);
 

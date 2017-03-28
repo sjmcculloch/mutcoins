@@ -1,7 +1,7 @@
 {
   "name": "mutcoins",
   "version": "1.0.0",
-  "description": "A static site for makemutcoins.com",
+  "description": "A static site for mutcoins.com",
   "main": "index.js",
   "author": "Scott McCulloch",
   "license": "ISC",

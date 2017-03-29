@@ -152,7 +152,6 @@ gulp.task('watch', ['styles:watch', 'templates:watch']);
 gulp.task('build:local', function(callback) {
   runSequence(
     'clean', 
-    'clean-temp',
     'styles',
     'generate-recent-blogs',
     'generate-blogs',

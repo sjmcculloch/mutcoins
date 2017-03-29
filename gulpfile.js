@@ -52,17 +52,17 @@ gulp.task('generate', () =>
 gulp.task('generate-blogs', function () {
   var css = fs.readFileSync('./dist/css/style.css', { encoding: 'utf8' });
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
-  nunj.configure('views');
   for (var item = 0; item < posts.length; item++) {
     var res = env.render('pages/post.html', posts[item]);
-    fs.writeFile('temp/' + posts[item].slug + '.hbs', res, function(err) {
+
+    fs.writeFile('dist/' + posts[item].slug + '.html', res, function(err) {
         if(err) {
             return console.log('Unable to write file ' + err);
         }
     });
   }
 
-  gulp.src("./temp/*.hbs")
+  gulp.src("./dist/*.html")
     .pipe(prettyUrl())
     .pipe(gulp.dest("./dist"));
 });
@@ -70,9 +70,7 @@ gulp.task('generate-blogs', function () {
 
 gulp.task('generate-recent-blogs', function () {
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
-  nunj.configure('views');
-
-    res = env.render('pages/post-recent.html', {posts: posts});
+  res = env.render('pages/post-recent.html', {posts: posts});
 
   fs.writeFile('views/partials/dynamic/post-recent.html', res, function(err) {
       if(err) {
@@ -164,8 +162,8 @@ gulp.task('build:local', function(callback) {
     'clean-temp',
     'styles',
     'generate-recent-blogs',
-    'generate',
     'generate-blogs',
+    'generate',
     'images',
     callback
   );

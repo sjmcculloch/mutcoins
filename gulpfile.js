@@ -93,11 +93,6 @@ gulp.task('clean', function () {
     .pipe(clean());
 });
 
-gulp.task('clean-temp', function () {
-  return gulp.src('temp/*', {read: false})
-    .pipe(clean());
-});
-
 // Get the posts data from the cloud CMS and stash it locally
 gulp.task('get:posts', () =>
   client.getEntries({'content_type':'2wKn6yEnZewu2SCCkus4as'})
@@ -111,7 +106,6 @@ gulp.task('get:posts', () =>
       }
     )
 );
-
 
 // Get data from the cloud CMS and stash it locally
 gulp.task('get', ['get:posts']);
@@ -127,7 +121,6 @@ gulp.task('styles', () =>
   gulp.src(['css/**/*'])
     .pipe(gulp.dest('dist/css'))
 );
-
 
 // Ensure any config files make to the dist folder
 gulp.task('configs', () =>

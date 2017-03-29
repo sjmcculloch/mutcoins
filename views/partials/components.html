@@ -16,7 +16,7 @@
       <div class="entry-content" itemprop="text">
         {% if post.featuredImage %}
           <a class="entry-image-link" href="/{{ post.slug }}/" aria-hidden="true">
-            <img width="800" height="300" src="{{ post.featuredImage.fields.file.url }}" class=" post-image entry-image" alt="Best Drone Cameras 2017 &#8211; Buyer&#8217;s Guide" itemprop="image" srcset="{{ post.featuredImage.fields.file.url }}?w=800 800w, {{ post.featuredImage.fields.file.url }}?w=300 300w, {{ post.featuredImage.fields.file.url }}?w=768 768w" sizes="(max-width: 800px) 100vw, 800px"/>
+            <img width="800" height="300" src="{{ post.featuredImage.fields.file.url }}" class=" post-image entry-image" alt="Best Drone Cameras 2017 &#8211; Buyer&#8217;s Guide" itemprop="image" srcset="{{ post.featuredImage.fields.file.url }} 800w, {{ post.featuredImage.fields.file.url }}?w=300 300w, {{ post.featuredImage.fields.file.url }}?w=768 768w" sizes="(max-width: 800px) 100vw, 800px"/>
           </a>
         {% endif %}
         <p>{{ post.description }} 

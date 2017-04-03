@@ -54,12 +54,7 @@ gulp.task('generate-blogs', function () {
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
   for (var item = 0; item < posts.length; item++) {
     var res = env.render('pages/post.html', posts[item]);
-
-    fs.writeFile('dist/' + posts[item].slug + '.html', res, function(err) {
-        if(err) {
-            return console.log('Unable to write file ' + err);
-        }
-    });
+    fs.writeFile('dist/' + posts[item].slug + '.html', res);
   }
 
   gulp.src("./dist/*.html")
@@ -71,13 +66,7 @@ gulp.task('generate-blogs', function () {
 gulp.task('generate-recent-blogs', function () {
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
   res = env.render('pages/post-recent.html', {posts: posts});
-
-  fs.writeFile('views/partials/dynamic/post-recent.html', res, function(err) {
-      if(err) {
-          return console.log('Unable to write file ' + err);
-      }
-  });
-
+  fs.writeFileSync('views/partials/dynamic/post-recent.html', res);
 });
 
 // set up the contentful query client

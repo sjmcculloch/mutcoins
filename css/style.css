@@ -1289,6 +1289,7 @@ Site Navigation
 .genesis-nav-menu .menu-item {
 	display: inline-block;
 	text-align: left;
+	white-space: nowrap;
 }
 
 .genesis-nav-menu li li {

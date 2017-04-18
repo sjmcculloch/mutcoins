@@ -203,6 +203,11 @@ ul {
 }
 
 li {
+	list-style-type: none;
+}
+
+.content li { 
+	list-style-type: disc; 
 }
 
 hr {

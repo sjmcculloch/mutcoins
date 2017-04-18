@@ -111,6 +111,11 @@ gulp.task('styles', () =>
     .pipe(gulp.dest('dist/css'))
 );
 
+gulp.task('scripts', () =>
+  gulp.src(['js/**/*'])
+    .pipe(gulp.dest('dist/js'))
+);
+
 // Ensure any config files make to the dist folder
 gulp.task('configs', () =>
   gulp.src(['_redirects','browserconfig.xml','manifest.json'])
@@ -120,6 +125,10 @@ gulp.task('configs', () =>
 // Watchers
 gulp.task('styles:watch', () =>
   gulp.watch('css/**/*', ['styles'])
+);
+
+gulp.task('scripts:watch', () =>
+  gulp.watch('js/**/*', ['scripts'])
 );
 
 gulp.task('templates:watch', () =>
@@ -136,7 +145,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('default', ['build:local']);
-gulp.task('watch', ['styles:watch', 'templates:watch']);
+gulp.task('watch', ['styles:watch', 'scripts:watch', 'templates:watch']);
 
 gulp.task('build:local', function(callback) {
   runSequence(
@@ -146,6 +155,7 @@ gulp.task('build:local', function(callback) {
     'generate-blogs',
     'generate',
     'images',
+    'scripts',
     callback
   );
 });

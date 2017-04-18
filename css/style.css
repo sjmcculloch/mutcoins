@@ -199,12 +199,10 @@ p {
 
 ol,
 ul {
-	margin: 0;
-	padding: 0;
+	margin-bottom: 30px;
 }
 
 li {
-	list-style-type: none;
 }
 
 hr {

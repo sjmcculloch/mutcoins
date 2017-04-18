@@ -231,7 +231,11 @@ blockquote {
 	background: #e2f0fc; 
 	border: 1px solid #90b8e0; 
 	padding: 15px 15px 10px 15px; 
-	margin: 15px 0 30px 0;
+	margin-bottom: 30px;
+}
+
+blockquote p {
+	margin: 5px;
 }
 
 

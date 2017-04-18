@@ -199,12 +199,12 @@ p {
 
 ol,
 ul {
-	margin-bottom: 30px;
+	margin: 0;
 }
 
 .content ol,
 .content ul {
-	margin: 0;
+	margin-bottom: 30px;
 }
 
 li {

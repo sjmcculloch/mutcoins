@@ -206,6 +206,7 @@ ul {
 .content ol,
 .content ul {
 	margin-bottom: 30px;
+	margin-left: 10px;
 }
 
 li {

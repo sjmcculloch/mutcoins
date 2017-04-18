@@ -202,6 +202,11 @@ ul {
 	margin-bottom: 30px;
 }
 
+.content ol,
+.content ul {
+	margin: 0;
+}
+
 li {
 	list-style-type: none;
 }

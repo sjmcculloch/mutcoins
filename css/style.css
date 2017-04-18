@@ -200,6 +200,7 @@ p {
 ol,
 ul {
 	margin: 0;
+	padding: 0;
 }
 
 .content ol,

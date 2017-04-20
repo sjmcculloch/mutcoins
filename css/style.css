@@ -589,21 +589,22 @@ a.button.white-clear {
 --------------------------------------------- */
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	line-height: 2;
-	margin-bottom: 40px;
-	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 1em;
+    border: none
 }
 
 tbody {
 	border-bottom: 1px solid #ddd;
 }
 
-td,
-th {
-	text-align: left;
+
+tbody td {
+    vertical-align: top;
 }
+
 
 td {
 	border-top: 1px solid #ddd;
@@ -613,6 +614,49 @@ td {
 th {
 	font-weight: 300;
 }
+
+td,
+th {
+    padding: 8px;
+    border: none;
+    background: 0 0;
+    text-align: left;
+    float: none!important
+}
+
+
+tbody td,
+tfoot th {
+    border-top: 1px solid #ddd
+}
+
+tbody tr:first-child td {
+    border-top: 0
+}
+
+thead th {
+    border-bottom: 1px solid #ddd
+}
+
+tfoot th,
+thead th {
+    background-color: #d9edf7;
+    font-weight: 700;
+    vertical-align: middle
+}
+
+tr:nth-child(odd) td {
+    background-color: #f9f9f9
+}
+
+tr:nth-child(even) td {
+    background-color: #fff
+}
+
+tr:hover td {
+    background-color: #f3f3f3
+}
+
 
 /* ## Screen Reader Text
 --------------------------------------------- */

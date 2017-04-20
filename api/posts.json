@@ -1,109 +1,5 @@
 [
   {
-    "title": "Ultimate Tickets in Madden",
-    "slug": "ultimate-tickets",
-    "description": "Ultimate tickets offer players of Madden an exciting opportunity to design their own card. Find out about the confirmed and rumoured cards that holders of the lucky tickets are designing.",
-    "author": [
-      {
-        "sys": {
-          "space": {
-            "sys": {
-              "type": "Link",
-              "linkType": "Space",
-              "id": "nso7hcqr5tuu"
-            }
-          },
-          "id": "6s511iLKW4gw0uMOm6GusC",
-          "type": "Entry",
-          "createdAt": "2017-03-27T10:43:52.577Z",
-          "updatedAt": "2017-03-27T10:45:59.180Z",
-          "revision": 2,
-          "contentType": {
-            "sys": {
-              "type": "Link",
-              "linkType": "ContentType",
-              "id": "1kUEViTN4EmGiEaaeC6ouY"
-            }
-          },
-          "locale": "en-US"
-        },
-        "fields": {
-          "name": "Scott McCulloch",
-          "profilePhoto": {
-            "sys": {
-              "space": {
-                "sys": {
-                  "type": "Link",
-                  "linkType": "Space",
-                  "id": "nso7hcqr5tuu"
-                }
-              },
-              "id": "2dYAGVHBKEI2qMAeKyqYi6",
-              "type": "Asset",
-              "createdAt": "2017-03-27T10:43:16.220Z",
-              "updatedAt": "2017-03-27T10:54:50.862Z",
-              "revision": 2,
-              "locale": "en-US"
-            },
-            "fields": {
-              "title": "Scott McCulloch",
-              "description": "Scott McCulloch is a 38-year-old Programmer from Australia. ",
-              "file": {
-                "url": "//images.contentful.com/nso7hcqr5tuu/2dYAGVHBKEI2qMAeKyqYi6/c3a6891f95827e553664a3c2935d7a60/635642829977021090.jpeg",
-                "details": {
-                  "size": 10414,
-                  "image": {
-                    "width": 140,
-                    "height": 140
-                  }
-                },
-                "fileName": "635642829977021090.jpeg",
-                "contentType": "image/jpeg"
-              }
-            }
-          },
-          "biography": "Scott is a 38 year-old programmer from Australia."
-        }
-      }
-    ],
-    "body": "Ultimate tickets (formerly known as Golden Tickets) are an exciting time in Madden Ultimate Team. Initially launched in March/April each year, EA places ultimate tickets in card packs (10 for each console). If you are lucky enough to pull one, you can design your own player! \n\nHowever, there are a few limitations on these tickets:\n\n- It must be based on an existing card in the game\n- You cannot boost speed or acceleration\n\nWith these limitations in mind, these cards will still be juiced. Let's look at the rumoured cards for Madden 17 Ultimate Team. \n\n## PlayStation 4 Ultimate Ticket Players\n### 1. HB Todd Gurley (confirmed)\n\n### 2. LOLB Anthony Barr (confirmed)\n\n### 3. WR Terrelle Pryor [MBx2 RR] (confirmed)\n\n### 4. HB Derrick Henry (confirmed)\n\n### 5. MLB Brian Urlacher (likely)\n\n### 6. FS Ha-Ha Clinton-Dix (rumoured)\n\n## Xbox One Ultimate Ticket Players\n\n### 1. MLB Rob Gronkowski [MBx2 CL] (confirmed)\n\n### 2. TE Jimmy Graham [B MBx2 PS] (confirmed)\n\n### 3. WR Demaryius Thomas [Energized MBx2 PS] (confirmed)\n\n### 4. CB Deion Sanders (confirmed)",
-    "featuredImage": {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "nso7hcqr5tuu"
-          }
-        },
-        "id": "jxULtgcQ5quKyS8s6kUEM",
-        "type": "Asset",
-        "createdAt": "2017-04-18T14:00:58.030Z",
-        "updatedAt": "2017-04-18T14:00:58.030Z",
-        "revision": 1,
-        "locale": "en-US"
-      },
-      "fields": {
-        "title": "ultimate-ticket-2017",
-        "file": {
-          "url": "//images.contentful.com/nso7hcqr5tuu/jxULtgcQ5quKyS8s6kUEM/807630eefa426a0b8f5954f737849d74/ultimate-ticket-2017.jpg",
-          "details": {
-            "size": 122007,
-            "image": {
-              "width": 800,
-              "height": 300
-            }
-          },
-          "fileName": "ultimate-ticket-2017.jpg",
-          "contentType": "image/jpeg"
-        }
-      }
-    },
-    "date": "2017-04-18",
-    "metaTitle": "Confirmed & Rumoured Ultimate Tickets in Madden 17 (April 2017)",
-    "metaDescription": "Learn about the ultimate ticket program and checkout the updated list of players either confirmed or rumoured to be appearing in Madden this year."
-  },
-  {
     "title": "Making Coins in Madden",
     "slug": "making-mut-coins-in-madden",
     "description": "Learn how to make Madden Ultimate Team (MUT) coins with our comprehensive guide. Build your way to Madden wealth with our \"no money spent\" tips so you can take to the field with a God Squad.",
@@ -206,5 +102,109 @@
     "date": "2017-03-01",
     "metaTitle": "Making Coins in Madden 17 - become a MUT Millionaire (Mar. 2017)",
     "metaDescription": "Making Coins in Madden 17 - become a MUT Millionaire (Mar. 2017)"
+  },
+  {
+    "title": "Ultimate (Golden) Ticket Tracker Madden 17",
+    "slug": "ultimate-tickets",
+    "description": "Ultimate tickets offer players of Madden an exciting opportunity to design their own card. Find out about the confirmed and rumoured cards that holders of the lucky tickets are designing.",
+    "author": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "nso7hcqr5tuu"
+            }
+          },
+          "id": "6s511iLKW4gw0uMOm6GusC",
+          "type": "Entry",
+          "createdAt": "2017-03-27T10:43:52.577Z",
+          "updatedAt": "2017-03-27T10:45:59.180Z",
+          "revision": 2,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "1kUEViTN4EmGiEaaeC6ouY"
+            }
+          },
+          "locale": "en-US"
+        },
+        "fields": {
+          "name": "Scott McCulloch",
+          "profilePhoto": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "nso7hcqr5tuu"
+                }
+              },
+              "id": "2dYAGVHBKEI2qMAeKyqYi6",
+              "type": "Asset",
+              "createdAt": "2017-03-27T10:43:16.220Z",
+              "updatedAt": "2017-03-27T10:54:50.862Z",
+              "revision": 2,
+              "locale": "en-US"
+            },
+            "fields": {
+              "title": "Scott McCulloch",
+              "description": "Scott McCulloch is a 38-year-old Programmer from Australia. ",
+              "file": {
+                "url": "//images.contentful.com/nso7hcqr5tuu/2dYAGVHBKEI2qMAeKyqYi6/c3a6891f95827e553664a3c2935d7a60/635642829977021090.jpeg",
+                "details": {
+                  "size": 10414,
+                  "image": {
+                    "width": 140,
+                    "height": 140
+                  }
+                },
+                "fileName": "635642829977021090.jpeg",
+                "contentType": "image/jpeg"
+              }
+            }
+          },
+          "biography": "Scott is a 38 year-old programmer from Australia."
+        }
+      }
+    ],
+    "body": "Ultimate tickets (formerly known as Golden Tickets) are an exciting time in Madden Ultimate Team. Initially launched in March/April each year, EA places ultimate tickets in card packs (10 for each console). If you are lucky enough to pull one, you can design your own player! \n\n## PlayStation 4 Ultimate Ticket Players\n\n\n| Player     | Position   | Chemistries     | Status     |\n| ---------- | ---------- | ---------- | ---------- |\n| Todd Gurley | HB | B MBx2 PS | [Confirmed](https://www.youtube.com/watch?v=f0bLe_hd5BM&feature=youtu.be)       |\n| Anthony Barr | LOLB | TBD | Confirmed |\n| Terrelle Pryor | WR | B MBx2 RR | Confirmed |\n| Derrick Henry | HB | B MBx2 PS | Confirmed |\n| Brian Urlacher | MLB | TBD | Rumoured |\n| Ha-Ha Clinton-Dix | FS | TBD | [Rumoured](https://twitter.com/Sayrok87/status/848631622501113860) |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n\n## Xbox Ultimate Ticket Players\n\n\n| Player     | Position   | Chemistries     | Status     |\n| ---------- | ---------- | ---------- | ---------- |\n| Jadeveon Clowney | ROLB | H BHx2 CL | [Confirmed](https://twitter.com/CodyeBell/status/850111231381962752)       |\n| Demaryius Thomas | WR | E MBx2 PS | [Confirmed](http://www.muthead.com/forums/madden/mut-discussion/1152462-ut-dt) |\n| Jimmy Graham | TE | B MBx2 PS | [Confirmed](https://twitter.com/KevinDacm81/status/849458108590174209) |\n| Rob Gronkowski | MLB (OOP) | P6 CLx2 MB | [Confirmed](http://www.muthead.com/forums/madden/mut-discussion/1147171-ultimate-ticket-i-have-chosen) \n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n| TBD       | TBD       | TBD       | TBD       |\n\n## Unknown Console Ultimate Ticket Players\n\n| Player     | Position   | Chemistries     | Status     |\n| ---------- | ---------- | ---------- | ---------- |\n| Marcus Mariota | QB | G DTx2 CM | Rumoured |\n| Sammy Watkins | WR | T RRx2 SE | Rumoured |\n\n## Ultimate Ticket Fan Art \n\n> The following card art is fan art from [HawksCustoms](http://twitter.com/hawkscustoms) - we'll update the art once EA releases the cards.\n\n![ut-gurley](//images.contentful.com/nso7hcqr5tuu/79JzLiEaZi48eAa8eogo0S/3df906d431f609de3871511f30f6fcc8/ut-gurley.jpg)\n\n![ut-pryor](//images.contentful.com/nso7hcqr5tuu/8dECjDBCYEq8kwQAAUCSg/50579266ab5135623dcb4197e93423ab/ut-pryor.jpg)\n\n![ut-henry](//images.contentful.com/nso7hcqr5tuu/7ASxNSF5dKaoOwY6Ow8kQm/61f10d38fd7bcbd3d41049f3cdee8a98/ut-henry.jpg)\n\n![ut-gronk](//images.contentful.com/nso7hcqr5tuu/QhF1VSCAi2GGKg8yq2oy6/8a0c0ddf2c01fb8573cf8a7f5581087a/ut-gronk.jpg)\n\n![ut-graham](//images.contentful.com/nso7hcqr5tuu/bFZK11KFWgyIE6OgKSqQk/2624f491aa957466c6da04a234cdaaee/ut-graham.png)\n\n![ut-thomas](//images.contentful.com/nso7hcqr5tuu/3fRxjFJdZSGOKkGK68SgEi/811aa1b2b98188059e3d7f21e48456eb/ut-thomas.jpg)\n\n![ut-sanders](//images.contentful.com/nso7hcqr5tuu/5wmmM4K6kMCWkAgM6oyoUu/486151b17b8218f81e99be0557f83bbf/ut-sanders.jpg)\n\n",
+    "featuredImage": {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "nso7hcqr5tuu"
+          }
+        },
+        "id": "jxULtgcQ5quKyS8s6kUEM",
+        "type": "Asset",
+        "createdAt": "2017-04-18T14:00:58.030Z",
+        "updatedAt": "2017-04-18T14:00:58.030Z",
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "ultimate-ticket-2017",
+        "file": {
+          "url": "//images.contentful.com/nso7hcqr5tuu/jxULtgcQ5quKyS8s6kUEM/807630eefa426a0b8f5954f737849d74/ultimate-ticket-2017.jpg",
+          "details": {
+            "size": 122007,
+            "image": {
+              "width": 800,
+              "height": 300
+            }
+          },
+          "fileName": "ultimate-ticket-2017.jpg",
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "date": "2017-04-18",
+    "metaTitle": "Confirmed & Rumoured Ultimate Tickets in Madden 17 (April 2017)",
+    "metaDescription": "Learn about the ultimate ticket program and checkout the updated list of players either confirmed or rumoured to be appearing in Madden this year."
   }
 ]

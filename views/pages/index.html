@@ -1,4 +1,4 @@
 {% import "partials/components.html" as comp %}
-{% for post in api.posts -%}
+{% for post in api.posts|sort(true, false, 'date') -%}
   {{ comp.article(post) }}
 {% endfor -%}

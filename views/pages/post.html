@@ -6,6 +6,15 @@
 
 {% block canonical %}/{{ slug }}{% endblock %}
 
+{% block header %}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@makemutcoins">
+	<meta name="twitter:creator" content="@makemutcoins">
+	<meta name="twitter:title" content="{{ title }}">
+	<meta name="twitter:description" content="{{ metaDescription }}">
+	<meta name="twitter:image" content="{{ featuredImage.fields.file.url }}">
+{% endblock %}
+
 {% block content %}
 <header class="entry-header">
 	<h1 class="entry-title" itemprop="headline">{{ title }}</h1>

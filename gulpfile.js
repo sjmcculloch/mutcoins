@@ -53,7 +53,6 @@ gulp.task('generate-blogs', function () {
   var css = fs.readFileSync('./dist/css/style.css', { encoding: 'utf8' });
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
   for (var item = 0; item < posts.length; item++) {
-    process.stdout.write(posts[item].date + '\n');
     var res = env.render('pages/post.html', posts[item]);
     fs.writeFile('dist/' + posts[item].slug + '.html', res);
   }
@@ -63,12 +62,17 @@ gulp.task('generate-blogs', function () {
     .pipe(gulp.dest("./dist"));
 });
 
-
 gulp.task('generate-recent-blogs', function () {
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
   posts.sort(function(a,b) {return (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0);} );
   res = env.render('pages/post-recent.html', {posts: posts});
   fs.writeFileSync('views/partials/dynamic/post-recent.html', res);
+});
+
+gulp.task('generate-sitemap', function () {
+  var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
+  res = env.render('pages/sitemap.xml', {posts: posts});
+  fs.writeFileSync('dist/sitemap.xml', res);
 });
 
 // set up the contentful query client
@@ -155,6 +159,7 @@ gulp.task('build:local', function(callback) {
     'styles',
     'generate-recent-blogs',
     'generate-blogs',
+    'generate-sitemap',
     'generate',
     'images',
     'scripts',

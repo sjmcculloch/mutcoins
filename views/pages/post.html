@@ -13,6 +13,14 @@
 	<meta name="twitter:title" content="{{ title }}">
 	<meta name="twitter:description" content="{{ metaDescription }}">
 	<meta name="twitter:image" content="https:{{ featuredImage.fields.file.url }}">
+	<meta property="og:locale" content="en_US"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="{{ title }}"/>
+	<meta property="og:description" content="T{{ metaDescription }}"/>
+	<meta property="og:url" content="https://www.makemutcoins.com/{{ post.slug }}"/>
+	<meta property="og:site_name" content="MakeMutCoins"/>
+	<meta property="article:publisher" content="http://facebook.com/makemutcoins"/>
+	<meta property="og:image" content="https:{{ featuredImage.fields.file.url }}"/>
 {% endblock %}
 
 {% block content %}

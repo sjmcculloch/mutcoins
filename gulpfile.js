@@ -15,6 +15,8 @@ const stringify = require('json-stringify-safe');
 var dateFilter = require('nunjucks-date-filter');
 const markdown = require('nunjucks-markdown');
 const marked = require('marked');
+const ampify = require('ampify');
+
 var replace = require('gulp-replace');
 
 // Add a custom nunjucks environment for custom filters
@@ -50,6 +52,11 @@ gulp.task('generate', () =>
 
 
 gulp.task('generate-blogs', function () {
+  var dir = './dist/amp';
+  if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir);
+  }
+
   var css = fs.readFileSync('./dist/css/style.css', { encoding: 'utf8' });
   var posts = JSON.parse( fs.readFileSync('./api/posts.json', { encoding: 'utf8' }));
   for (var item = 0; item < posts.length; item++) {
@@ -60,6 +67,23 @@ gulp.task('generate-blogs', function () {
   gulp.src("./dist/*.html")
     .pipe(prettyUrl())
     .pipe(gulp.dest("./dist"));
+
+
+  // generate AMP
+  for (var item = 0; item < posts.length; item++) {
+    var post = posts[item];
+    post.body = marked(posts[item].body);
+    post.body =  post.body.replace(/img src="\/\//g, 'img src="https://');
+    post.body = ampify(post.body, {cwd: 'amp'});
+
+    var res = env.render('pages/amp.html', post);
+    fs.writeFile('dist/amp/' + posts[item].slug + '.html', res);
+  }
+
+  gulp.src("./dist/amp/*.html")
+    .pipe(prettyUrl())
+    .pipe(gulp.dest("./dist/amp"));
+
 });
 
 gulp.task('generate-recent-blogs', function () {

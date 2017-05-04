@@ -1,0 +1,23 @@
+{% extends "layouts/amp.html" %}
+
+{% block canonical %}
+<link rel="canonical" href="http://www.makemutcoins.com/{{ slug }}" />
+{% endblock %}
+
+{% block content %}
+<header class="entry-header">
+	<h1 class="entry-title" itemprop="headline">{{ title }}</h1>
+	<p class="entry-meta">by 
+		<strong>
+			<span class="entry-author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+				<span class="entry-author-name" itemprop="name">{{ author[0].fields.name }}</span>
+			</span>
+		</strong> | Last Updated <time class="entry-time" itemprop="datePublished" datetime="{{ date | date('YYYY-MM-DD') }}">{{ date | date("MMMM D, YYYY") }}</time>
+	</p>
+</header>
+
+{% markdown %}
+{{ body }}
+{% endmarkdown %}
+
+{% endblock %}

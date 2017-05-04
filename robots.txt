@@ -1,0 +1,4 @@
+User-agent: *
+
+# Announce Sitemap Locations
+Sitemap: https://www.makemutcoins.com/sitemap.xml

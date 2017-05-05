@@ -16,6 +16,9 @@ var dateFilter = require('nunjucks-date-filter');
 const markdown = require('nunjucks-markdown');
 const marked = require('marked');
 const ampify = require('ampify');
+var cheerio = require('cheerio');
+var request = require('sync-request');
+var sizeOf = require('image-size');
 
 var replace = require('gulp-replace');
 
@@ -70,6 +73,7 @@ gulp.task('generate-blogs', function () {
 
 
   // generate AMP
+  /*
   for (var item = 0; item < posts.length; item++) {
     var post = posts[item];
     post.body = marked(posts[item].body);
@@ -83,6 +87,63 @@ gulp.task('generate-blogs', function () {
   gulp.src("./dist/amp/*.html")
     .pipe(prettyUrl())
     .pipe(gulp.dest("./dist/amp"));
+
+*/
+
+  var $, round;
+  var options = options || {};
+
+  options.normalizeWhitespace = options.normalizeWhitespace || false;
+  options.xmlMode = options.xmlMode || false;
+  options.decodeEntities = options.decodeEntities || false;
+
+  options.cwd = options.cwd || '';
+  options.round = options.round || true;
+
+
+  if (options.round) {
+    round = function(numb) { return Math.round(numb / 5) * 5; }
+  }
+  else {
+    round = function(numb) { return numb; }
+  }
+
+  for (var item = 0; item < posts.length; item++) {
+
+    var post = posts[item];
+    post.body = marked(posts[item].body);
+    $ = cheerio.load(post.body, options);
+
+    $('img:not(width):not(height)').each(function() {
+      var src = $(this).attr('src');
+      if (!src) {
+        return $(this).remove();
+      }
+
+      if (src.indexOf('//') != -1) {
+        var imageUrl = this.attribs.src;
+        if( src.indexOf('//') == 0 ) {
+          imageUrl = "https:" + imageUrl;
+        }
+
+        $(this).attr({
+          layout: 'responsive'
+        });
+        var response = request('GET', imageUrl);
+        if (response.statusCode === 200) {
+          var size = sizeOf(response.body);
+          $(this).attr({
+            width: round(size.width),
+            height: round(size.height)
+          });
+        }
+      };
+    });
+
+    post.body = $.html();
+    var res = env.render('pages/amp.html', post);
+    fs.writeFile('dist/amp/' + posts[item].slug + '.html', res);
+  }
 
 });
 

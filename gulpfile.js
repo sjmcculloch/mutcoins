@@ -90,6 +90,11 @@ gulp.task('generate-blogs', function () {
 
 */
 
+
+  var tags = {
+    amp: ['img', 'video']
+  };
+
   var $, round;
   var options = options || {};
 
@@ -140,6 +145,11 @@ gulp.task('generate-blogs', function () {
       };
     });
 
+    /* amp tags */
+    $(tags.amp.join(',')).each(function() {
+      this.name = 'amp-' + this.name;
+    });
+    
     post.body = $.html();
     var res = env.render('pages/amp.html', post);
     fs.writeFile('dist/amp/' + posts[item].slug + '.html', res);

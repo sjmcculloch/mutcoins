@@ -209,37 +209,6 @@ h4 {
 	font-size: 2rem;
 }
 
-.image-section h4,
-.solid-section h4 {
-	font-size: 54px;
-	font-size: 5.4rem;
-	margin-bottom: 40px;
-}
-
-.home-mid-left h3,
-.home-mid-left h4 {
-	font-size: 30px;
-	font-size: 3.0rem;
-}
-
-.home-mid-right h4 {
-	font-size: 44px;
-	font-size: 4.4rem;
-	margin-bottom: 40px;
-}
-
-.home-mid-wide {
-	-webkit-background-clip: padding-box;
-	-moz-background-clip:    padding;
-	background-clip:         padding-box;
-	position: relative;
-	z-index: 9;
-}
-
-.front-page-1 .image-section h4 {
-	margin-bottom: 10px;
-}
-
 h5 {
 	font-size: 18px;
 	font-size: 1.8rem;
